@@ -1,0 +1,70 @@
+body {
+  background-color: #ebf4fa;
+}
+
+.navbar {
+  margin-bottom: 1rem;
+}
+
+.navbar a {
+  font-weight: bold;
+  color: gold;
+}
+
+.navbar a:hover {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.navbar-brand>img {
+  display: inline-block;
+  width: 20px;
+  margin-bottom: 2px;
+  margin-right: 5px;
+  border-radius: 2px;
+}
+
+ul.nav.navbar-nav li {
+  margin: 0 0.5rem;
+}
+
+.onboarding>.navbar {
+  background-image: url("./images/nav-bg.png");
+  background-size: 100% 100%;
+}
+
+.home-new-hero {
+  color: black;
+  background-image: url("https://vancouver.ca/images/cov/feature/car-share-landing.jpg");
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+a.btn.btn-danger,
+a.btn.btn-danger:hover {
+  color: white;
+}
+
+.my-cute-icons {
+  color: gold;
+}
+
+.cars-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.car-card {
+  background-color: white;
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  margin: 10px 10px;
+  border-radius: 5px;
+  padding: 30px;
+}
