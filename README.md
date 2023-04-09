@@ -15,7 +15,7 @@
 ## Software Architecture: Microservices Pattern with `Docker` and `Kubernetes`
 * Container Orchestration files using `Kubernetes` are located within `/resource-manifests`
 
-* An example of the whole app under a `Kubernetes` managed `Cluster` running locally:
+* An example of the whole app running under a `Kubernetes` managed `Cluster` running locally:
 
 ![image](https://user-images.githubusercontent.com/17951024/230801283-67cf52e4-a010-49f9-bdab-e7bd7a7ec4dd.png)
 
