@@ -12,8 +12,8 @@
 * Database: MongoDB non-relational database
 * Security: User Authentication + Authorization using a combination of bcrypt.js and Json-Web-Token (JWT) 
 
-## Extra notes
-* As the app is using the Node.js runtime engine and MongoDB as the database, thus please install Node.js and MongoDB on your local machine in order to run the appllication.
-* Once Node.js and MongoDB are installed and this repo has been cloned into a local directory, follow below instructions and run commands to start the database server first:
-** cd into where the /bin dir of Mongodb is located so that you can start the mongodb server:
-** e.g. 'cd /Users/yifan/mongodb/bin' then start the mongod DB server: 'mongod --dbpath=/Users/yifan/data/db/'
+## Microservices Architecture with `Docker` and `Kubernetes`
+* Container Orchestration files using `Kubernetes` are located within `/resource-manifests`
+
+* An example of the whole app under a `Kubernetes` managed Cluster running locally:
+
