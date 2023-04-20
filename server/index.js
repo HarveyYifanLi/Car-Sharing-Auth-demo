@@ -11,7 +11,20 @@ const errorHandler = require("./handlers/error"); // the GEM is here :) !!
 const authRoutes = require("./routes/auth");
 const carsRoutes = require("./routes/cars");
 
+const redis = require('redis');
+const REDIS_PORT = process.env.REDIS_PORT || 6379;
+
+const redisClient = redis.createClient({
+  legacyMode: true,
+  PORT: REDIS_PORT
+});
+
+(async () => { 
+  await redisClient.connect(); 
+})();
+
 const { loginRequired, ensureCorrectUser } = require("./middleware/auth");
+const { checkCache } = require("./middleware/redis-cache");
 
 //const PORT = 8081;
 const PORT = process.env.PORT || 3001;
@@ -29,14 +42,20 @@ app.use(
   carsRoutes
 );
 
-app.get("/api/cars", loginRequired, async function(req, res, next) {
+app.get("/api/cars", loginRequired, checkCache, async function(req, res, next) {
   try {
     let cars = await db.Car.find()
       .sort({ createdAt: "desc" }) // sort the cars by creation date
       .populate("user", {
         username: true,
         profileImageUrl: true
-      }); // also populate corresponding user data for each car
+    }) || []; // also populate corresponding user data for each car
+    // let cars = [{ make: "New", model: "Model S", year: 2012, colour: "red", location_id: 005, location_description: "Surrey Site", user: null }];
+    
+    // before returning the response, persist the cars data to redis cache
+    // and the cache is set to expire in 60 seconds
+    redisClient.setex("allPublicCars", 60, JSON.stringify(cars), () => (console.log('successfully set cache for allPublicCars!')));
+
     return res.status(200).json(cars);
   } catch (err) {
     return next(err);
