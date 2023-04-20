@@ -11,7 +11,7 @@
 * Backend: Express.js framework in Node.js runtime engine
 * Database: MongoDB non-relational database
 * Security: User Authentication + Authorization using a combination of bcrypt.js and Json-Web-Token (JWT) 
-* In-memory Caching: Redis in-memory Caching is being used to the API endpoint (i.e. /api/cars) with the most traffic
+* In-memory Caching: Redis in-memory Caching is being implemented on the API endpoint with the most traffic (i.e. /api/cars)
 
 ## Software Architecture: Microservices Pattern with `Docker` and `Kubernetes`
 * Container Orchestration files using `Kubernetes` are located within `/resource-manifests`
