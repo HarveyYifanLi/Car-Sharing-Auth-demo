@@ -23,7 +23,7 @@
 ![image](https://user-images.githubusercontent.com/17951024/230801283-67cf52e4-a010-49f9-bdab-e7bd7a7ec4dd.png)
 
 
-### Also integrated `GraphQL` to two of the major backend APIs in querying cars
+### Also integrated `GraphQL` for two of the major backend APIs in querying cars
 
 * An example of accessing the  `/graphql` endpoint, aka the `GraphiQL` playground, once the whole app is up:
 
