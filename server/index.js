@@ -5,6 +5,8 @@ const express = require("express");
 const app = express();
 const cors = require("cors"); // as requests from a different port number is considered a violation of CORS policy thus need to use this package to get around this
 const bodyParser = require("body-parser");
+const { graphqlHTTP } = require("express-graphql");
+const schema = require("./schema");
 
 const errorHandler = require("./handlers/error"); // the GEM is here :) !!
 
@@ -61,6 +63,15 @@ app.get("/api/cars", loginRequired, checkCache, async function(req, res, next) {
     return next(err);
   }
 });
+
+app.use(
+  "/graphql",
+  graphqlHTTP({
+    schema: schema,
+    pretty: true,
+    graphiql: true,
+  })
+);
 
 // firstly register an error middleware when NO route was hit/found
 app.use(function(req, res, next) {
