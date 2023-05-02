@@ -6,7 +6,7 @@ metadata:
     app: car-sharing-auth-demo-client                                 
 spec:                                                
   containers:
-    - image: harveyyifanli/car-sharing-auth-demo-client-v6
+    - image: harveyyifanli/car-sharing-auth-demo-client-v8
       name: car-sharing-auth-demo-client                         
       ports:
         - containerPort: 80                          

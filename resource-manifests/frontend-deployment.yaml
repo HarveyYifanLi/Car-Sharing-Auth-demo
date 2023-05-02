@@ -21,7 +21,7 @@ spec:
         app: car-sharing-auth-demo-client                                
     spec:
       containers:
-        - image: harveyyifanli/car-sharing-auth-demo-client
+        - image: harveyyifanli/car-sharing-auth-demo-client-v8
           imagePullPolicy: Always                         
           name: car-sharing-auth-demo-client
           ports:
