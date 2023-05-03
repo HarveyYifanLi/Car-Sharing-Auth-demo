@@ -20,8 +20,7 @@
 
 * An example of the whole app running under a `Kubernetes` managed `Cluster` running locally:
 
-![image](https://user-images.githubusercontent.com/17951024/230801283-67cf52e4-a010-49f9-bdab-e7bd7a7ec4dd.png)
-
+![image](https://user-images.githubusercontent.com/17951024/235820376-4bbd00ec-d05a-4bb1-8e72-5e12b1d3865d.png)
 
 ### Also integrated `GraphQL` for two of the major backend APIs in querying cars
 
