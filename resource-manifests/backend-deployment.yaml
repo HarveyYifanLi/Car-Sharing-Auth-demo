@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment                                         
 metadata:
-  name: car-sharing-auth-demo-client
+  name: car-sharing-auth-demo-server
   labels:
-    app: car-sharing-auth-demo-client
+    app: car-sharing-auth-demo-server
 spec:
   selector:
     matchLabels:
-      app: car-sharing-auth-demo-client
-  replicas: 2                               
+      app: car-sharing-auth-demo-server
+  replicas: 2                                           
   minReadySeconds: 15
   strategy:
     type: RollingUpdate                                  
@@ -18,11 +18,11 @@ spec:
   template:    #specifies the pod template that the Deployment will use to create new pods.
     metadata:
       labels:
-        app: car-sharing-auth-demo-client                                
+        app: car-sharing-auth-demo-server                                
     spec:
       containers:
-        - image: harveyyifanli/car-sharing-auth-demo-client-v8
+        - image: harveyyifanli/car-sharing-auth-demo-server-v3
           imagePullPolicy: Always                         
-          name: car-sharing-auth-demo-client
+          name: car-sharing-auth-demo-server
           ports:
-            - containerPort: 80
+            - containerPort: 3001
