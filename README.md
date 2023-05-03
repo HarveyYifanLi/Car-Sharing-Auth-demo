@@ -15,10 +15,13 @@
 * `GraphQL` querying endpoint integrated at route `/graphql`
 
 
-### Software Architecture: Microservices Pattern with `Docker` and `Kubernetes`
-* Container Orchestration files using `Kubernetes` are located within `/resource-manifests`
+### Software Architecture: Microservices Pattern with 3 `Dockerized` Microservices orchestrated under a `Kubernetes` Cluster
+* `Container Orchestration` files using `Kubernetes` are located within `/resource-manifests`:
 
-* An example of the whole app running under a `Kubernetes` managed `Cluster` running locally:
+-> There is a `Service` and `Deployment` Kubernetes resource config `yaml` files for each of the 3 services: 
+frontend `Nginx` web-server, backend `Node.js` server, and `Redis` in-memory database.
+
+* An example of the whole system running under a `Kubernetes` Cluster locally:
 
 ![image](https://user-images.githubusercontent.com/17951024/235820376-4bbd00ec-d05a-4bb1-8e72-5e12b1d3865d.png)
 
