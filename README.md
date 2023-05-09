@@ -25,6 +25,11 @@ frontend `Nginx` web-server, backend `Node.js` server, and `Redis` in-memory dat
 
 ![image](https://user-images.githubusercontent.com/17951024/235820376-4bbd00ec-d05a-4bb1-8e72-5e12b1d3865d.png)
 
+System Status on Kubernetes Dashboard
+
+![image](https://user-images.githubusercontent.com/17951024/236990911-8e1e6fcf-3710-4bce-8456-8a66cb773644.png)
+
+
 ### Also integrated `GraphQL` for two of the major backend APIs in querying cars
 
 * An example of accessing the  `/graphql` endpoint, aka the `GraphiQL` playground, once the whole app is up:
